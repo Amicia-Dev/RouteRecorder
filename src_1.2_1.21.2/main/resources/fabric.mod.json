@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "routerecorder",
+  "version": "${version}",
+
+  "name": "Route Recorder",
+  "description": "A mod mainly for Wynncraft (But works anywhere) which adds the functionality to record and display routes you have created by drawing a line behind you which you can follow. All your recorded routes will be saved so you can display them at any time!",
+  "authors": [],
+  "contact": {},
+
+  "license": "BSD-3-Clause",
+  "icon": "assets/routerecorder/icon.png",
+
+  "environment": "client",
+  "entrypoints": {
+    "client": ["org.amicia.routerecorder.client.RouterecorderClient"],
+    "main": ["org.amicia.routerecorder.Routerecorder"]
+  },
+
+  "mixins": [
+    "routerecorder.mixins.json"
+    ,{
+      "config": "routerecorder.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
