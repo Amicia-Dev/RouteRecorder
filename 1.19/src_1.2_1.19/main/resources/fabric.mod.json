@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "routerecorder",
+  "version": "${version}",
+  "name": "Route Recorder",
+  "description": "A mod mainly for Wynncraft (But works anywhere) which records, saves and displays routes for you.",
+  "authors": [],
+  "contact": {},
+  "license": "BSD-3-Clause",
+  "icon": "assets/routerecorder/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "org.amicia.routerecorder.client.RouterecorderClient"
+    ],
+    "main": [
+      "org.amicia.routerecorder.Routerecorder"
+    ]
+  },
+  "mixins": [
+    "routerecorder.mixins.json",
+    {
+      "config": "routerecorder.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
